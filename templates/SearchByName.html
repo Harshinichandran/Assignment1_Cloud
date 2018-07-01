@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<body>
+
+		<center>
+		<h1> Harshini 6563 </h1>
+		<header> <h1> Home </h1> </header>
+		<br> <br>
+		<h2> View pictures of a person by entering their Name</h2>
+		<br>
+
+
+		<!--<h2><a href = "/list">Retrive Details of Students</a></h2>-->
+			<!--<h2><a href = "/Question2">Search user by name</a></h2>-->
+
+		<form action="{{url_for('SearchByName')}}" method="POST" enctype="multipart/form-data">
+	      <input id="text" name="SearchByName" placeholder="Enter Name">
+    	   <input type="submit" value="Search" id="upload-button">
+            <table border = 1>
+         <thead>
+            <td>Pictures</td>
+
+         </thead>
+         {% for row in rows %}
+         <tr>
+             <td><img src="data:image/jpeg;base64,{{row['Pic']}}" alt="Smiley face"></img></td>
+          </tr>
+         {% endfor %}
+         </table>
+		</form>
+</center>
+	</body>
+</html>

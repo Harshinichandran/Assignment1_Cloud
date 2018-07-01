@@ -3,20 +3,37 @@
 	<body>
 
 		<center>
+		<h1> Harshini 6563 </h1>
 		<header> <h1> Home </h1> </header>
 		<br> <br>
-		<h2> This portal records the details of students (Name, Address, State and ZIP)</h2>
+		<h2> This portal records the details of Persons (Name,Grade,Room,Telephone,Pic,Keyword)</h2>
 		<br>
-
-		<h2><a href = "/enternew">Enter Student Details</a></h2> <br>
-		<h2><a href = "/list">Retrive Student Details</a></h2>
-
+		</center>
+		<center>
+		<p><h3>Upload CSV File</h3></p>
 		<form action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
 	      <strong>Files:</strong><br>
     	  <input id="file-picker" type="file" name="file" accept="image/*" multiple>
     	  <div id="msg"></div>
     	  <input type="submit" value="Upload!" id="upload-button">
 		</form>
+		<br>
+		<br>
+
+		<h2><a href = "/list">Retrive Complete Details</a></h2>
+			<br>
+			<br>
+			<p><h3>List of Operations on the Data</h3></p>
+		<h4><a href = "/Question2">1) Search user by name</a></h4>
+		<h4><a href = "/Question3">2) Search user by Grade</a></h4>
+		<h4><a href = "/Question4">3) Change picture for a person</a></h4>
+		<h4><a href = "/Question5">4) Remove a Person</a></h4>
+		<h4><a href = "/Question6">5) Update Keywords</a></h4>
+		<h4><a href = "/Question7">6) Change Grade</a></h4>
+
+		<br>
+		<br>
+	</center>
       
 	</body>
 </html>

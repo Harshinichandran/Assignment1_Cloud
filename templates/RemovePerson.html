@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<body>
+    <center>
+		<h2>Harshini</h2>
+		<h2>1001586563</h2>
+
+
+		<header> <h1>Enter Name to remove a person from the Database</h1> </header>
+		<br> <br>
+          <form action="{{url_for('RemovePerson')}}" method="POST" enctype="multipart/form-data">
+	      <input id="text" name="RemovePerson" placeholder="Enter Name">
+    	   <input type="submit" value="Delete" id="upload-button">
+          </form><br>
+            <br>
+		 <table border = 1>
+         <thead>
+
+            <td>List of Persons now in Database</td>
+
+         </thead>
+         {% for row in rows %}
+         <tr>
+             <td>{{row['name']}}</td>
+
+          </tr>
+         {% endfor %}
+         </table>
+	</body>
+</html>

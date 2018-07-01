@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<body>
+     <center>
+		<h1>Harshini - 6563</h1>
+
+
+		<center>
+		<header> <h1>Update the keywords for the name enetered</h1> </header>
+            <br> <br>
+          <form action="{{url_for('UpdateKeywords')}}" method="POST" enctype="multipart/form-data">
+	      <input id="text" name="Name" placeholder="Enter Name">
+              <input id="text2" name="UpdateKeywords" placeholder="Enter Keywords">
+    	   <input type="submit" value="Update" id="upload-button">
+          </form>
+		 <table border = 1>
+         <thead>
+            <td>Updated List</td>
+
+         </thead>
+         {% for row in rows %}
+         <tr>
+             <td>{{row['name']}}</td>
+             <td>{{row['Keyword']}}</td>
+          </tr>
+         {% endfor %}
+         </table>
+    </center>
+	</body>
+</html>

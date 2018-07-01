@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<body>
+    <center>
+		<h2>Harshini</h2>
+		<h2>1001586563</h2>
+
+
+		<header> <h1>Enter Grade to view Pictures of people who have scored less than the entered grade </h1> </header>
+            <br> <br>
+          <form action="{{url_for('DisplayGrade')}}" method="POST" enctype="multipart/form-data">
+	      <input id="text" name="DisplayGrade" placeholder="Enter Grade">
+    	   <input type="submit" value="Search" id="upload-button">
+          </form>
+		 <table border = 1>
+         <thead>
+            <td>Grades</td>
+           
+         </thead>
+         {% for row in rows %}
+         <tr>
+             <td>{{row['name']}}</td>
+             <td><img src="data:image/jpeg;base64,{{row['Pic']}}" alt="Smiley face"></img></td>
+          </tr>
+         {% endfor %}
+         </table>
+    </>
+	</body>		
+</html>
