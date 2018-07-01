@@ -25,12 +25,7 @@ def upload():
         filename = file.filename        
         with open('People.csv') as csvfile:
               readCSV = csv.reader(csvfile, delimiter=',')
-              names =[]
-              grades =[]
-              rooms =[]
-              telephones =[]
-              pictures =[]
-              keywords =[]
+
               for row in readCSV:
                 name = row[0]
                 grade =row[1]
@@ -42,7 +37,7 @@ def upload():
                   encoded_string = base64.b64encode(image_file.read()) 
 
                   dict = {pic:encoded_string.decode('utf-8')}
-                  #full_pic="data:image/jpeg;base64,"+dict[pic]
+
                 
                 con = sql.connect("Stu.db")
                 cur = con.cursor()
